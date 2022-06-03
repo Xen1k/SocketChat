@@ -1,0 +1,18 @@
+.appear-enter {
+    opacity: 0;
+    /* transform: scale(0.9); */
+}
+
+.appear-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.appear-leave {
+    opacity: 1;
+}
+
+.appear-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}

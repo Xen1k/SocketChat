@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 import TextField from '@material-ui/core/TextField';
 import { Chat } from "./Components/Messages";
 import { defaultFont, colors } from "./defaultStyles";
-
+import './App.css'
 // Инициализируем сокет
 const socket = io.connect('http://localhost:80')
 
@@ -63,8 +63,10 @@ const App = () => {
   }
 
 
+
   return (
     <div style={{ display: 'flex', backgroundColor: colors.mainBackground, fontFamily: defaultFont.fontFamily }}>
+
 
       {/* Вывод чата */}
       <Chat chat={chat} userId={userId} chatHeight={windowDimensions.height / 1.15} />
@@ -88,7 +90,7 @@ const App = () => {
         </div>
 
         {/* Кнопка отправки */}
-        <button style={{
+        <button className="glow-on-hover" style={{
           ...styles.button, backgroundColor: colors.theme, color: colors.userMessageText
         }}> Send </button>
 
